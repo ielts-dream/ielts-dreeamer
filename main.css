@@ -1,0 +1,49 @@
+/* Login Page Specific Styles */
+.phone-input input {
+    color: white !important;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.phone-input input::placeholder {
+    color: #94a3b8;
+    opacity: 0.7;
+}
+/* Replace existing OTP styles with this */
+.otp-inputs {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+.otp-inputs input {
+    aspect-ratio: 1;
+    height: 60px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 12px;
+    color: var(--primary-light);
+    transition: all 0.2s;
+}
+
+.otp-inputs input:focus {
+    border-color: var(--primary);
+    background: #0f172a;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+    transform: scale(1.05);
+}
+
+.otp-inputs input.filled {
+    border-color: var(--accent);
+    animation: pulse 0.5s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
